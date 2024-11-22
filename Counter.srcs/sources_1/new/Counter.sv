@@ -16,10 +16,10 @@ module Counter #(
 
   always @(posedge clk, negedge rst_n) begin
 
-    if (~rst_n) q <= 0;
+      if (~rst_n) q <= '0;
     else if(en) begin
-        if (load) q<=d;
-        else q<=q+1;
+        if (load) q <= d;
+        else q <= q + 1;
     end
   end
 
